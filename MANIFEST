@@ -19,4 +19,5 @@ clib/FastGF2.c
 clib/FastGF2.h
 clib/Makefile.PL
 clib/Matrix.c
+typemap
 META.yml                                 Module meta-data (added by MakeMaker)
