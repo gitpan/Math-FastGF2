@@ -16,9 +16,15 @@ WriteMakefile(
 	# Un-comment this if you add C files to link with later:
 #    OBJECT            => 'FastGF2.o', # link all the C files too
 #    OBJECT            => '$(O_FILES)', # link all the C files too
+    EXE_FILES          => ['bin/benchmark-Math-FastGF2.pl',
+			   'bin/shamir-combine.pl',
+			   'bin/shamir-split.pl'],
 );
 sub MY::postamble {
 '$(MYEXTLIB): clib/Makefile
 	cd clib && $(MAKE) $(PASSTHRU)
+
+# Add dependency to ensure files are rebuilt if perlsubs.c changes
+FastGF2.c : perlsubs.c
 ';
 }
