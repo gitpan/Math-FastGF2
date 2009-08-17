@@ -1,6 +1,6 @@
 package Math::FastGF2;
 
-use 5.008000;
+use 5.006000;
 use strict;
 use warnings;
 
@@ -15,7 +15,7 @@ require Exporter;
 	       );
 @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 @EXPORT = (  );
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 require XSLoader;
 XSLoader::load('Math::FastGF2', $VERSION);
@@ -424,7 +424,7 @@ page, see:
 
 =head1 AUTHOR
 
-Declan Malone, E<lt>idablack@sourceforge.netE<gt>
+Declan Malone, E<lt>idablack@users.sourceforge.netE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
